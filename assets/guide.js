@@ -18326,6 +18326,12 @@
 
 	var pkg = __webpack_require__(162);
 
+	var URL = {
+	  home: '/macaca',
+	  guide: '/macaca/guide.html',
+	  api: '/macaca/api.html'
+	};
+
 	var HeaderComponent = (function (_React$Component) {
 	  _inherits(HeaderComponent, _React$Component);
 
@@ -18348,9 +18354,16 @@
 	      };
 	    }
 	  }, {
+	    key: 'setActive',
+	    value: function setActive(pathname, page) {
+	      console.log(pathname);
+	      return pathname === URL[page] ? 'active' : null;
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var path = location.pathname;
+
 	      return React.createElement(
 	        'header',
 	        null,
@@ -18377,8 +18390,8 @@
 	                null,
 	                React.createElement(
 	                  'a',
-	                  { href: '/',
-	                    className: path === '/' ? 'active' : null },
+	                  { href: URL.home,
+	                    className: this.setActive(path, 'home') },
 	                  'Home'
 	                )
 	              ),
@@ -18387,8 +18400,8 @@
 	                null,
 	                React.createElement(
 	                  'a',
-	                  { href: '/guide.html',
-	                    className: path === '/guide.html' ? 'active' : null },
+	                  { href: URL.guide,
+	                    className: this.setActive(path, 'guide') },
 	                  'Guide'
 	                )
 	              ),
@@ -18397,8 +18410,8 @@
 	                null,
 	                React.createElement(
 	                  'a',
-	                  { href: '/api.html',
-	                    className: path === '/api.html' ? 'active' : null },
+	                  { href: URL.api,
+	                    className: this.setActive(path, 'api') },
 	                  'API'
 	                )
 	              )
