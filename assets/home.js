@@ -18364,7 +18364,7 @@
 	          { className: 'container nav' },
 	          React.createElement(
 	            'div',
-	            { className: 'title pull-left' },
+	            { className: 'title' },
 	            React.createElement(
 	              'h1',
 	              null,
@@ -18373,7 +18373,7 @@
 	          ),
 	          React.createElement(
 	            'div',
-	            { className: 'items pull-right' },
+	            { className: 'items' },
 	            React.createElement(
 	              'ul',
 	              null,

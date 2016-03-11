@@ -36,10 +36,10 @@ class HeaderComponent extends React.Component {
     return (
       <header>
         <div className="container nav">
-          <div className="title pull-left">
+          <div className="title">
             <h1>Macaca</h1>
           </div>
-          <div className="items pull-right">
+          <div className="items">
             <ul>
               <li>
                 <a href="/"
