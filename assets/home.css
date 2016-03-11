@@ -226,3 +226,28 @@ code {
   font-weight: bolder;
   line-height: 2em;
 }
+@media screen and (max-width: 500px) {
+  .banner-title .banner-logo{
+    width: 40%
+  }
+  .banner-title {
+    width: 100%;
+  }
+  .banner-title h1 {
+    box-sizing: border-box;
+    font-size: 40px;
+    float: left;
+    width: 60%;
+    margin: 0;
+    padding-left: 10px;
+  }
+  .install-code {
+    width: 90%;
+  }
+  .sample-code-container {
+    width: 100%
+  }
+  .sample-sscreentshot {
+    width: 100%;
+  }
+} 

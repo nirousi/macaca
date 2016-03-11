@@ -771,3 +771,11 @@ header .nav .title h1 {
   width: 40px;
   margin: 0 auto;
 }
+@media screen and (max-width: 500px) {
+  .macaca-ribbon {
+    display: none;
+  }
+  header .items {
+    padding-right: 0;
+  }
+}
