@@ -14,23 +14,29 @@
 'use strict';
 
 let React = require('react');
-let LayoutComponnet = require('../layout');
-let Info = require('../info');
 
-class ApiPage extends React.Component {
+let MarkdownComponent = require('./markdown');
+let installation = require('./installation-code');
+
+class InstallationComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state= {
     };
   }
 
   render() {
     return (
-      <LayoutComponnet>
-        <Info />
-      </LayoutComponnet>
+      <div className="clearfix installation-container">
+        <div className="install-code container">
+          <MarkdownComponent>
+          {installation.toString().match(/---md-start---([\s\S]*)---md-end---/)[1]}
+          </MarkdownComponent>
+        </div>
+      </div>
     );
   }
 }
 
-React.render(<ApiPage />, document.body);
+module.exports = InstallationComponent;
+

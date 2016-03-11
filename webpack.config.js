@@ -17,7 +17,9 @@ var path = require('path');
 
 var config = {
   entry: {
-    home: path.resolve('pages', 'home')
+    home: path.resolve('pages', 'home'),
+    guide: path.resolve('pages', 'guide'),
+    api: path.resolve('pages', 'api')
   },
   output: {
     path: path.join(__dirname, 'assets'),

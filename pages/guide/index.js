@@ -15,8 +15,9 @@
 
 let React = require('react');
 let LayoutComponnet = require('../layout');
+let Info = require('../info');
 
-class HomePage extends React.Component {
+class GuidePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,11 +27,11 @@ class HomePage extends React.Component {
   render() {
     return (
       <LayoutComponnet>
-        <div>123</div>
+        <Info />
       </LayoutComponnet>
     );
   }
 }
 
-React.render(<HomePage />, document.body);
+React.render(<GuidePage />, document.body);
 

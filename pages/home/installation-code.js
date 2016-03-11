@@ -13,24 +13,16 @@
 
 'use strict';
 
-let React = require('react');
-let LayoutComponnet = require('../layout');
-let Info = require('../info');
+module.exports = function() {
+/*
+---md-start---
 
-class ApiPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
+```shell
+$ npm i macaca-client -g    # install client
+$ macaca run                # run, that's all
+```
 
-  render() {
-    return (
-      <LayoutComponnet>
-        <Info />
-      </LayoutComponnet>
-    );
-  }
-}
+---md-end---
+*/
+};
 
-React.render(<ApiPage />, document.body);

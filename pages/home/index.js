@@ -14,7 +14,11 @@
 'use strict';
 
 let React = require('react');
-let LayoutComponnet = require('../layout');
+
+let BannerComponent = require('./banner');
+let SampleComponent = require('./sample');
+let LayoutComponent = require('../layout');
+let InstallationComponent = require('./installation');
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -25,9 +29,11 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <LayoutComponnet>
-        <div>123</div>
-      </LayoutComponnet>
+      <LayoutComponent>
+        <BannerComponent />
+        <InstallationComponent />
+        <SampleComponent />
+      </LayoutComponent>
     );
   }
 }

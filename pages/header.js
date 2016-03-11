@@ -32,16 +32,28 @@ class HeaderComponent extends React.Component {
   }
 
   render() {
+    const path = location.pathname
     return (
       <header>
-        <div className="container header">
-          <div className="title">
+        <div className="container nav">
+          <div className="title pull-left">
             <h1>Macaca</h1>
           </div>
-          <div className="description">
-            <h1>
-              <p></p>
-            </h1>
+          <div className="items pull-right">
+            <ul>
+              <li>
+                <a href="/"
+                   className={path === '/' ? 'active': null}>Home</a>
+              </li>
+              <li>
+                <a href="/guide.html"
+                   className={path === '/guide.html' ? 'active': null}>Guide</a>
+              </li>
+              <li>
+                <a href="/api.html"
+                   className={path === '/api.html' ? 'active': null}>API</a>
+              </li>
+            </ul>
           </div>
         </div>
         <ForkmeonComponent {...this.getForkmeonProps()}/>

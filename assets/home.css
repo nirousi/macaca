@@ -8,8 +8,6 @@
 }
 .markdown {
   opacity: 0;
-  -webkit-transition: opacity .8s ease;
-  transition: opacity .8s ease;
 }
 .fadeIn {
   opacity: 100!important;
@@ -60,7 +58,6 @@ body {
   font-style: normal;
   line-height: 1;
   position: relative;
-  opacity: 0.8;
 }
 a {
   color: #facd3e;
@@ -80,7 +77,8 @@ h1 {
   font-size: 2.75em;
   margin: 0;
 }
-header h1, header h2 {
+header h1,
+header h2 {
   font-weight: 300;
 }
 article h2, article h3 {
@@ -98,13 +96,9 @@ header h1 em {
 }
 a:hover, a:focus {
   color: #f9c725;
-  text-decoration: none;
 }
 a:active, a:hover {
   outline: 0;
-}
-footer {
-  padding: 20px 0;
 }
 .loading {
   font-size: 20px;
@@ -151,27 +145,84 @@ footer {
     font-size: 10px;
     padding: 10px 0;
   }
-  .header .description p {
-    padding: 0!important;
-    font-size: 40px;
-  }
-  .header .description {
-    position: static!important;
-  }
 }
-.header .description {
-  position: relative;
-  z-index: 99999;
+
+.home-container {
+  background: #353130;
+  padding: 50px 0;
 }
-.header .description p {
-  font-size: 50px;
-  padding-top: 26px;
-  padding-right: 40px;
-  text-rendering: optimizeLegibility;
-  font-weight: normal;
-  line-height: 1.2em;
+.banner-title {
+  float: left;
+  width: 50%;
 }
-.react-logo-svg {
-  width: 60px;
-  margin: 0 auto;
+
+.banner-title h1,
+.banner-title .banner-logo {
+  float: left;
+}
+
+.banner-title h1 {
+  line-height: 1;
+  padding-top: 33px;
+  font-size: 90px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  margin-left: 30px;
+}
+.banner-title h2 {
+  line-height: 1.2;
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: #d0bbab;
+  padding-left: 10px;
+}
+.description {
+  margin-bottom: 30px;
+}
+.banner-screenshot {
+  float: left;
+  width: 50%;
+}
+.sample-container {
+  background: #fff;
+  padding: 70px 0;
+}
+.sample-code-container {
+  float: left;
+  width: 39%;
+  height: 380px;
+  overflow: scroll;
+  margin-right: 1%;
+  border-radius: 2px;
+}
+.installation-container {
+  padding: 50px 0;
+  background: #ebd9ba;
+}
+.sample-sscreentshot {
+  float: left;
+  width: 60%;
+  border-radius: 2px;
+}
+
+.install-code {
+  width: 50%;
+  margin: 20px auto;
+}
+pre {
+  background: #2B2B2B;
+  color: #E6E1DC;
+  border: none;
+}
+code {
+  background: #2B2B2B;
+  color: #E6E1DC;
+}
+
+.install-code pre {
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 2em;
 }

@@ -11,26 +11,36 @@
  *
  * ================================================================ */
 
-'use strict';
-
 let React = require('react');
-let LayoutComponnet = require('../layout');
-let Info = require('../info');
+let Markdown = require('marked');
+let Highlight = require('highlight.js');
 
-class ApiPage extends React.Component {
+Markdown.setOptions({
+  highlight: function(code) {
+    return Highlight.highlightAuto(code).value;
+  }
+});
+
+class MarkdownComponent extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
     };
   }
 
+  componentWillMount() {
+  }
+
   render() {
     return (
-      <LayoutComponnet>
-        <Info />
-      </LayoutComponnet>
+      <div dangerouslySetInnerHTML = {
+        {
+          __html: Markdown(this.props.children.trim())
+        }
+      }></div>
     );
   }
 }
 
-React.render(<ApiPage />, document.body);
+module.exports = MarkdownComponent;

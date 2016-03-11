@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Automation Test with ease",
   "keywords": [
-    "blog"
+    "page"
   ],
   "repository": {
     "type": "git",
@@ -35,7 +35,8 @@
       "startserver-webpack": "*"
     }
   ],
-  "homepage": "https://macacajs.github.io/macaca",
+  "homepage": "https://github.com/macacajs",
+  "issues": "https://github.com/macacajs/macaca/issues",
   "author": "xudafeng",
   "email": "xudafeng@126.com",
   "blog": "http://xdf.me",

@@ -21,11 +21,12 @@ let pkg = require('../package');
 class FooterComponent extends React.Component {
   render() {
     return (
-      <footer className="text-center">
-        <hr/>
-        &copy;&nbsp;<a href={pkg.homepage}>{pkg.name}</a> {new Date().getFullYear()}
-        <div className="logo">
-          <LogoComponent bigCircleFillColor='#8e4a3a'/>
+      <footer>
+        <div className="container">
+          &copy;&nbsp;<a href={pkg.homepage}>{pkg.name}</a> {new Date().getFullYear()}
+          <div className="logo">
+            <LogoComponent bigCircleFillColor='#8e4a3a'/>
+          </div>
         </div>
       </footer>
     );
