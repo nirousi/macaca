@@ -19,7 +19,7 @@ const ForkmeonComponent = require('forkmeon.github.io');
 const pkg = require('../package');
 
 const URL = {
-  home: '/macaca',
+  home: '/macaca/',
   guide: '/macaca/guide.html',
   api: '/macaca/api.html'
 }

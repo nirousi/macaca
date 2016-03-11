@@ -18327,7 +18327,7 @@
 	var pkg = __webpack_require__(162);
 
 	var URL = {
-	  home: '/macaca',
+	  home: '/macaca/',
 	  guide: '/macaca/guide.html',
 	  api: '/macaca/api.html'
 	};
