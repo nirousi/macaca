@@ -13,10 +13,16 @@
 
 'use strict';
 
-let React = require('react');
-let ForkmeonComponent = require('forkmeon.github.io');
+const React = require('react');
+const ForkmeonComponent = require('forkmeon.github.io');
 
-let pkg = require('../package');
+const pkg = require('../package');
+
+const URL = {
+  home: '/macaca',
+  guide: '/macaca/guide.html',
+  api: '/macaca/api.html'
+}
 
 class HeaderComponent extends React.Component {
 
@@ -31,8 +37,14 @@ class HeaderComponent extends React.Component {
     };
   }
 
+  setActive(pathname, page) {
+    console.log(pathname)
+    return pathname === URL[page] ? 'active': null
+  }
+
   render() {
-    const path = location.pathname
+    const path = location.pathname;
+
     return (
       <header>
         <div className="container nav">
@@ -42,16 +54,16 @@ class HeaderComponent extends React.Component {
           <div className="items">
             <ul>
               <li>
-                <a href="/"
-                   className={path === '/' ? 'active': null}>Home</a>
+                <a href={URL.home}
+                   className={this.setActive(path, 'home')}>Home</a>
               </li>
               <li>
-                <a href="/guide.html"
-                   className={path === '/guide.html' ? 'active': null}>Guide</a>
+                <a href={URL.guide}
+                   className={this.setActive(path, 'guide')}>Guide</a>
               </li>
               <li>
-                <a href="/api.html"
-                   className={path === '/api.html' ? 'active': null}>API</a>
+                <a href={URL.api}
+                   className={this.setActive(path, 'api')}>API</a>
               </li>
             </ul>
           </div>
