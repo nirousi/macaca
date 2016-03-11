@@ -9,9 +9,33 @@
     "type": "git",
     "url": "git@github.com:macacajs/macaca.git"
   },
+  "precommit": [
+    "lint"
+  ],
   "devDependencies": {
-    "startserver": "~1.2.2"
+    "babel": "~5.8.23",
+    "babel-core": "^5.x",
+    "babel-loader": "^5.x",
+    "eslint-plugin-react": "~2.5.2",
+    "forkmeon.github.io": "*",
+    "highlight.js": "~8.3.0",
+    "istanbul-harmony": "~0.3.0",
+    "json-loader": "^0.5.2",
+    "jsx-loader": "^0.12.2",
+    "marked": "0.3.2",
+    "mocha": "*",
+    "react": "~0.13.1",
+    "react-logo": "~1.0.7",
+    "should": "*",
+    "startserver": "*",
+    "startserver-webpack": "~1.0.1"
   },
+  "startserver": [
+    {
+      "startserver-webpack": "*"
+    }
+  ],
+  "homepage": "https://macacajs.github.io/macaca",
   "author": "xudafeng",
   "email": "xudafeng@126.com",
   "blog": "http://xdf.me",
